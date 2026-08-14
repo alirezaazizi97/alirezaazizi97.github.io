@@ -1,0 +1,335 @@
+/* ============================================================
+   BASIC SETTINGS
+
+   Most of the visual appearance of the website lives in this file.
+   You do NOT need to understand all of it to edit your content.
+   ============================================================ */
+
+:root {
+  --background: #ffffff;
+  --text: #202124;
+  --muted: #62676f;
+  --border: #e5e7eb;
+  --soft-background: #f7f8fa;
+  --accent: #2457a7;
+
+  --content-width: 860px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+
+  /*
+    This uses fonts already installed on the visitor's device,
+    so the website does not need to download a special font.
+  */
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  line-height: 1.65;
+}
+
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--border);
+}
+
+
+.nav-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.nav-name {
+  color: var(--text);
+  font-weight: 700;
+}
+
+
+.nav-name:hover {
+  text-decoration: none;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+/* ============================================================
+   MAIN PAGE
+   ============================================================ */
+
+main {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+.hero {
+  padding: 100px 0 75px;
+  border-bottom: 1px solid var(--border);
+}
+
+
+.eyebrow {
+  margin: 0 0 10px;
+
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+h1 {
+  margin: 0 0 18px;
+
+  font-size: clamp(2.7rem, 8vw, 4.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+
+.hero-text {
+  max-width: 680px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+
+.hero-links {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+
+.button {
+  display: inline-block;
+
+  padding: 10px 16px;
+
+  background: var(--text);
+  color: white;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+
+.button:hover {
+  text-decoration: none;
+  opacity: 0.88;
+}
+
+
+.text-link {
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.section {
+  padding: 58px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+
+h2 {
+  margin: 0 0 24px;
+
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+
+.section-content {
+  max-width: 700px;
+}
+
+
+.section-content p:first-child {
+  margin-top: 0;
+}
+
+
+.section-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   RESEARCH INTEREST TAGS
+   ============================================================ */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.tag {
+  padding: 7px 12px;
+
+  background: var(--soft-background);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  font-size: 0.94rem;
+}
+
+
+/* ============================================================
+   PUBLICATIONS
+   ============================================================ */
+
+.publications {
+  display: grid;
+  gap: 18px;
+}
+
+
+.publication {
+  padding: 21px 22px;
+
+  background: var(--soft-background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+
+.publication p {
+  margin: 4px 0;
+}
+
+
+.pub-title {
+  font-size: 1.04rem;
+  font-weight: 700;
+}
+
+
+.pub-authors,
+.pub-venue {
+  color: var(--muted);
+}
+
+
+.pub-links {
+  margin-top: 9px !important;
+}
+
+
+.pub-links a {
+  margin-right: 14px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+
+.note {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 30px 24px 45px;
+
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+
+/* ============================================================
+   PHONE / SMALL SCREEN
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+}
